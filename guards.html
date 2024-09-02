@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/fontawesome-free-6.4.2-web/css/all.min.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+
+    .head2 {
+        width: 100%;
+        background-color: rgb(32, 32, 32);
+        height: 65px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .head2 .guard {
+        color: #fff;
+        font-size: 23px;
+        font-family: "Josefin Sans", sans-serif;
+        font-weight: 900;
+        padding-left: 23px;
+    }
+
+    .head2 nav a {
+        padding: 10px;
+        margin: 10px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: "SUSE", sans-serif;
+        font-weight: 600;
+        transition: all 1.5s ease;
+    }
+
+    .head2 nav a:hover {
+        background-color: rgb(32, 32, 32);
+    }
+
+    .our_guards {
+        position: relative;
+        width: 100%;
+        height: 120vh;
+        margin-top: 50px;
+    }
+
+    .our_guards h1 {
+        position: absolute;
+        margin-top: 25px;
+        margin-left: 715px;
+        text-transform: uppercase;
+        color: #000;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 20px;
+    }
+
+    .our_guards p {
+        width: 750px;
+        height: 50px;
+        font-family: "SUSE", sans-serif;
+        font-size: 15px;
+        text-align: center;
+        font-weight: 600;
+        position: absolute;
+        margin-top: 75px;
+        margin-left: 425px;
+    }
+
+    .guard_container {
+        position: absolute;
+        margin-top: 125px;
+        margin-left: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 375px);
+        grid-gap: 150px;
+    }
+
+    .guard_container img {
+        width: 360px;
+        height: 432px;
+    }
+
+    .guard_container .text_box {
+        width: 360px;
+        position: relative;
+        height: 100px;
+        text-align: center;
+        background-color: #000;
+        opacity: 0.5;
+        backface-visibility: visible;
+        margin-top: -103px;
+        padding: 20px;
+    }
+
+    .guard_container .text_box h3 {
+        color: #fff;
+        opacity: 1;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .guard_container .text_box p {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: -210px;
+        z-index: 100px;
+        text-align: center;
+        color: #fff;
+        font-family: "SUSE", sans-serif;
+    }
+
+
+    .box {
+        margin-top: 30px;
+    }
+
+    .our_guards button {
+        padding: 10px;
+        text-transform: uppercase;
+        width: 150px;
+        height: 40px;
+        background-color: rgb(228, 206, 12);
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+        border: 1px solid rgb(228, 206, 12);
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 1s ease;
+        text-align: center;
+        position: absolute;
+        margin-top: 650px;
+        margin-left: 715px;
+    }
+
+    .our_guards button:hover {
+        color: rgb(228, 206, 12);
+        background: transparent;
+    }
+
+    .foot {
+        width: 100%;
+        height: 400px;
+        background-color: rgb(32, 32, 32);
+        display: flex;
+        position: relative;
+    }
+
+    .guard-footer {
+        width: 20%;
+        height: 69%;
+        position: absolute;
+        margin-top: 75px;
+        margin-left: 100px;
+    }
+
+    .guard-footer a {
+        text-align: center;
+        color: white;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 22px;
+        font-weight: 400px;
+    }
+
+    .guard-footer p {
+        font-family: "SUSE", sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        color: white;
+    }
+
+    .links {
+        width: 10%;
+        height: 60%;
+        position: absolute;
+        margin-top: 75px;
+        margin-left: 475px;
+    }
+
+    .links h1 {
+        text-align: center;
+        color: white;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 22px;
+        font-weight: 400px;
+    }
+
+    .links a {
+        font-family: "SUSE", sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        color: white;
+    }
+
+    .foot .contact {
+        position: absolute;
+        width: 20%;
+        height: 71%;
+        margin-top: 85px;
+        margin-left: 750px;
+    }
+
+    .contact span {
+        gap: 10px;
+    }
+
+    .contact i {
+        color: #fff;
+    }
+
+    .foot .contact h1 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 22px;
+        color: white;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .foot .contact span {
+        display: flex;
+        margin: 10px;
+    }
+
+    .foot span p {
+        color: white;
+        font-family: "Josefin Sans", sans-serif;
+    }
+
+    .news {
+        width: 35%;
+        height: 71%;
+        margin-top: 75px;
+        margin-left: 1050px;
+    }
+
+    .news h1 {
+        text-align: center;
+        color: white;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 22px;
+        font-weight: 400px;
+        text-transform: uppercase;
+    }
+
+    .news input {
+        width: 225px;
+        height: 35px;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        font-family: "SUSE", sans-serif;
+    }
+
+    .news button {
+        width: 165px;
+        height: 35px;
+        border-radius: 20px;
+        border: 1px solid rgb(228, 206, 12);
+        background-color: rgb(228, 206, 12);
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 15px;
+        cursor: pointer;
+        transition: all 1s ease;
+    }
+
+    .news button:hover {
+        background-color: transparent;
+        border: 1px solid rgb(228, 206, 12);
+        color: rgb(228, 206, 12);
+    }
+
+    .news i {
+        color: #fff;
+    }
+
+    .footer_wrapper {
+        background-color: rgb(32, 32, 32);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social {
+        display: flex;
+        column-gap: 30px;
+        align-items: center;
+    }
+
+    .copyright {
+        font-size: 16px;
+        font-family: monospace;
+    }
+
+    .copyright p+p {
+        margin-top: 0.5em;
+        font-family: monospace;
+    }
+</style>
+
+<body>
+    <div class="head2">
+        <a href="#" class="guard">Guarder</a>
+
+        <nav>
+            <a href="./index.html" target="_self">home</a>
+            <a href="./about.html" target="_self">about</a>
+            <a href="./services.html" target="_self">services</a>
+            <a href="./guards.html" target="_self">guards</a>
+            <a href="./contact.html" target="_self">contact us</a>
+        </nav>
+    </div>
+
+    <div class="our_guards">
+        <h1>our guards</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis reprehenderit nihil, hic sapiente nobis
+            nesciunt, fuga, non eum aspernatur excepturi voluptates laboriosam molestiae expedita quis.</p>
+        <div class="guard_container">
+            <div class="box">
+                <div class="img_box">
+                    <img src="./img/t1.jpg" alt="">
+                </div>
+                <div class="text_box">
+                    <h3>Martin Anderson</h3>
+                    <p>supervisor</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img_box">
+                    <img src="./img/t2.jpg" alt="">
+                </div>
+                <div class="text_box">
+                    <h3>Denny Butler</h3>
+                    <p>supervisor</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img_box">
+                    <img src="./img/t3.jpg" alt="">
+                </div>
+                <div class="text_box">
+                    <h3>Nathan Mcpherson</h3>
+                    <p>supervisor</p>
+                </div>
+            </div>
+        </div>
+        <button>view all</button>
+    </div>
+
+    <div class="foot">
+        <div class="guard-footer">
+            <a href="./index.html" target="_self">Guarder</a><br><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis fugit quasi, distinctio
+                temporibus ipsam aspernatur accusamus voluptates iusto optio.</p>
+        </div>
+        <div class="links">
+            <h1>Useful Links</h1><br>
+            <a href="#">
+                There are many
+                variations of
+                passages of
+                Lorem Ipsum
+                available, but the
+                majority have
+                suffered
+            </a>
+        </div>
+        <div class="contact">
+            <span>
+                <i class="fa fa-map-marker"></i>
+                <p>Page when looking at its layou</p>
+            </span><br>
+            <span>
+                <i class="fa fa-phone"></i>
+                <p>+0123456789</p>
+            </span><br>
+            <span>
+                <i class="fa fa-envelope"></i>
+                <p>demo@gmail.com</p>
+            </span>
+        </div>
+        <div class="news">
+            <h1>newsletter</h1><br>
+            <input type="email" placeholder="Enter your email"><br><br>
+            <button type="submit">Subscribe</button><br><br><br>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+
+
+        </div>
+
+    </div>
+    <div class="foot2">
+        <div class="footer_wrapper">
+            <ul class="social">
+                <li class="social_item"><a href="#!"><img src="./img/icons/vk.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/instagram.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/twitter.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/gitHub.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>
+            </ul>
+            <div class="copyright">
+                <p>© 2024 ahmedovv-develop</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

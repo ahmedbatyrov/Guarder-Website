@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarder</title>
+    <link rel="stylesheet" href="./css/fontawesome-free-6.4.2-web/css/all.min.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+
+        .head2 {
+            width: 100%;
+            background-color: rgb(32, 32, 32);
+            height: 65px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .head2 .guard {
+            color: #fff;
+            font-size: 23px;
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 900;
+            padding-left: 23px;
+        }
+
+        .head2 nav a {
+            padding: 10px;
+            margin: 10px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-family: "SUSE", sans-serif;
+            font-weight: 600;
+            transition: all 1.5s ease;
+        }
+
+        .head2 nav a:hover {
+            background-color: rgb(32, 32, 32);
+        }
+
+        .about {
+            position: relative;
+            margin-top: 50px;
+            display: flex;
+            padding: 20px;
+        }
+
+        .about img {
+            position: absolute;
+            margin-left: 100px;
+        }
+
+        .about_text {
+            padding: 25px;
+            position: absolute;
+            margin-top: 75px;
+            margin-left: 650px;
+            width: 700px;
+            height: 350px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .about_text h1 {
+            text-transform: uppercase;
+            font-size: 27px;
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        .about_text p {
+            font-size: 17px;
+            font-family: "SUSE", sans-serif;
+        }
+
+        .about_text button {
+            text-transform: uppercase;
+            width: 150px;
+            height: 40px;
+            background-color: rgb(228, 206, 12);
+            color: #fff;
+            font-family: "SUSE", sans-serif;
+            border: 1px solid rgb(228, 206, 12);
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 1s ease;
+            text-align: center;
+        }
+
+        .about_text button:hover {
+            color: rgb(228, 206, 12);
+            background: transparent;
+        }
+
+
+        .foot {
+            position: absolute;
+            margin-top: 600px;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(32, 32, 32);
+            display: flex;
+            position: relative;
+        }
+
+        .guard-footer {
+            width: 20%;
+            height: 69%;
+            position: absolute;
+            margin-top: 75px;
+            margin-left: 100px;
+        }
+
+        .guard-footer a {
+            text-align: center;
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 22px;
+            font-weight: 400px;
+        }
+
+        .guard-footer p {
+            font-family: "SUSE", sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            color: white;
+        }
+
+        .links {
+            width: 10%;
+            height: 60%;
+            position: absolute;
+            margin-top: 75px;
+            margin-left: 475px;
+        }
+
+        .links h1 {
+            text-align: center;
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 22px;
+            font-weight: 400px;
+        }
+
+        .links a {
+            font-family: "SUSE", sans-serif;
+            font-size: 17px;
+            font-weight: 300;
+            color: white;
+        }
+
+        .foot .contact {
+            position: absolute;
+            width: 20%;
+            height: 71%;
+            margin-top: 85px;
+            margin-left: 750px;
+        }
+
+        .contact span {
+            gap: 10px;
+        }
+
+        .contact i {
+            color: #fff;
+        }
+
+        .foot .contact h1 {
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 22px;
+            color: white;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .foot .contact span {
+            display: flex;
+            margin: 10px;
+        }
+
+        .foot span p {
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+        }
+
+        .news {
+            width: 35%;
+            height: 71%;
+            margin-top: 75px;
+            margin-left: 1050px;
+        }
+
+        .news h1 {
+            text-align: center;
+            color: white;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 22px;
+            font-weight: 400px;
+            text-transform: uppercase;
+        }
+
+        .news input {
+            width: 225px;
+            height: 35px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #fff;
+            font-family: "SUSE", sans-serif;
+        }
+
+        .news button {
+            width: 165px;
+            height: 35px;
+            border-radius: 20px;
+            border: 1px solid rgb(228, 206, 12);
+            background-color: rgb(228, 206, 12);
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+
+        .news button:hover {
+            background-color: transparent;
+            border: 1px solid rgb(228, 206, 12);
+            color: rgb(228, 206, 12);
+        }
+
+        .news i {
+            color: #fff;
+        }
+
+        .footer_wrapper {
+            background-color: rgb(32, 32, 32);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social {
+            display: flex;
+            column-gap: 30px;
+            align-items: center;
+        }
+
+        .copyright {
+            font-size: 16px;
+            font-family: monospace;
+        }
+
+        .copyright p+p {
+            margin-top: 0.5em;
+            font-family: monospace;
+        }
+    </style>
+    <div class="head2">
+        <a href="#" class="guard">Guarder</a>
+
+        <nav>
+            <a href="./index.html" target="_self">home</a>
+            <a href="./about.html" target="_self">about</a>
+            <a href="./services.html" target="_self">services</a>
+            <a href="./guards.html" target="_self">guards</a>
+            <a href="./contact.html" target="_self">contact us</a>
+        </nav>
+    </div>
+
+    <div class="about">
+        <img src="./img/about-img.jpg" alt="">
+        <div class="about_text">
+            <h1>who are we?</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis libero sapiente in accusantium vitae,
+                labore dicta debitis dolores obcaecati atque nulla, repudiandae, quidem neque laboriosam ipsam esse
+                est quam consectetur. Cum neque tempora dicta veniam ab vitae ducimus pariatur assumenda non,
+                consectetur praesentium quod harum sunt recusandae aspernatur voluptatibus aliquid. Delectus, odit
+                quis magnam, dolorum doloremque error commodi sapiente quas repellendus aperiam veritatis debitis
+                mollitia amet recusandae distinctio necessitatibus adipisci deleniti tempore quia illo corrupti!</p>
+            <button>read more</button>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="guard-footer">
+            <a href="./index.html" target="_self">Guarder</a><br><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit reiciendis fugit quasi, distinctio
+                temporibus ipsam aspernatur accusamus voluptates iusto optio.</p>
+        </div>
+        <div class="links">
+            <h1>Useful Links</h1><br>
+            <a href="#">
+                There are many
+                variations of
+                passages of
+                Lorem Ipsum
+                available, but the
+                majority have
+                suffered
+            </a>
+        </div>
+        <div class="contact">
+            <span>
+                <i class="fa fa-map-marker"></i>
+                <p>Page when looking at its layou</p>
+            </span><br>
+            <span>
+                <i class="fa fa-phone"></i>
+                <p>+0123456789</p>
+            </span><br>
+            <span>
+                <i class="fa fa-envelope"></i>
+                <p>demo@gmail.com</p>
+            </span>
+        </div>
+        <div class="news">
+            <h1>newsletter</h1><br>
+            <input type="email" placeholder="Enter your email"><br><br>
+            <button type="submit">Subscribe</button><br><br><br>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+
+
+        </div>
+
+    </div>
+    <div class="foot2">
+        <div class="footer_wrapper">
+            <ul class="social">
+                <li class="social_item"><a href="#!"><img src="./img/icons/vk.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/instagram.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/twitter.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/gitHub.svg" alt="Link"></a></li>
+                <li class="social_item"><a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link"></a></li>
+            </ul>
+            <div class="copyright">
+                <p>© 2024 ahmedovv-develop</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
